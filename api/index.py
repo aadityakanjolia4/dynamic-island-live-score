@@ -10,7 +10,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_apscheduler import APScheduler
 import os
 scheduler = APScheduler()
-DATABASE_URL="postgres://neondb_owner:npg_EJMSuvkDfL07@ep-empty-violet-a5e6ffu8-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require"
+DATABASE_URL="postgresql://neondb_owner:npg_EJMSuvkDfL07@ep-empty-violet-a5e6ffu8-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require"
 
 
 # Replace the CORS URL with your's
