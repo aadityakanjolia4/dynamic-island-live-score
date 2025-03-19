@@ -8,13 +8,16 @@ from datetime import datetime
 import pytz
 from flask_sqlalchemy import SQLAlchemy
 from flask_apscheduler import APScheduler
-
+import os
 scheduler = APScheduler()
+DATABASE_URL="postgres://neondb_owner:npg_EJMSuvkDfL07@ep-empty-violet-a5e6ffu8-pooler.us-east-2.aws.neon.tech/neondb?sslmode=require"
 
 
 # Replace the CORS URL with your's
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"  # Using SQLite
+# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"  # Using SQLite
+app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL
+
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
