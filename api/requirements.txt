@@ -25,3 +25,4 @@ zipp==3.17.0
 flask-sqlalchemy
 flask-apscheduler
 requests
+psycopg2-binary
